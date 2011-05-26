@@ -652,7 +652,6 @@
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../External/GHUnit/Frameworks\"",
 					"\"$(SRCROOT)/../External/GHUnit/Frameworks\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -680,7 +679,6 @@
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../External/GHUnit/Frameworks\"",
 					"\"$(SRCROOT)/../External/GHUnit/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
