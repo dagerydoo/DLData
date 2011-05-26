@@ -1,0 +1,586 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1920E1231337F72000DC381B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1920E1221337F72000DC381B /* CoreData.framework */; };
+		19431B6C135E087400216DEC /* DLEntityDeletionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 19431B6B135E087400216DEC /* DLEntityDeletionTest.m */; };
+		1954C7FE133D46F50003ED1E /* DLEntityCreationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1954C7FD133D46F50003ED1E /* DLEntityCreationTest.m */; };
+		198DE91A13341A0A00B9D56A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 198DE91913341A0A00B9D56A /* Foundation.framework */; };
+		198DE93113341A1900B9D56A /* DLData.h in Headers */ = {isa = PBXBuildFile; fileRef = 198DE92313341A1900B9D56A /* DLData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		198DE93213341A1900B9D56A /* DLDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 198DE92413341A1900B9D56A /* DLDataManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		198DE93313341A1900B9D56A /* DLDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 198DE92513341A1900B9D56A /* DLDataManager.m */; };
+		198DE93413341A1900B9D56A /* DLDataSeeder.h in Headers */ = {isa = PBXBuildFile; fileRef = 198DE92613341A1900B9D56A /* DLDataSeeder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		198DE93513341A1900B9D56A /* DLDataSeeder.m in Sources */ = {isa = PBXBuildFile; fileRef = 198DE92713341A1900B9D56A /* DLDataSeeder.m */; };
+		198DE93613341A1900B9D56A /* DLDataStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 198DE92813341A1900B9D56A /* DLDataStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		198DE93713341A1900B9D56A /* DLDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 198DE92913341A1900B9D56A /* DLDataStore.m */; };
+		198DE93813341A1900B9D56A /* DLDataStore.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 198DE92A13341A1900B9D56A /* DLDataStore.xcdatamodel */; };
+		198DE93913341A1900B9D56A /* DLImageValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 198DE92B13341A1900B9D56A /* DLImageValueTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		198DE93A13341A1900B9D56A /* DLImageValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 198DE92C13341A1900B9D56A /* DLImageValueTransformer.m */; };
+		198DE93B13341A1900B9D56A /* DLUniqueID.h in Headers */ = {isa = PBXBuildFile; fileRef = 198DE92D13341A1900B9D56A /* DLUniqueID.h */; };
+		198DE93C13341A1900B9D56A /* DLUniqueID.m in Sources */ = {isa = PBXBuildFile; fileRef = 198DE92E13341A1900B9D56A /* DLUniqueID.m */; };
+		198DE93D13341A1900B9D56A /* DLUniqueIDGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 198DE92F13341A1900B9D56A /* DLUniqueIDGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		198DE93E13341A1900B9D56A /* DLUniqueIDGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 198DE93013341A1900B9D56A /* DLUniqueIDGenerator.m */; };
+		19C5D7631335628C000757D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C5D7421335625E000757D3 /* UIKit.framework */; };
+		19C5D7641335628C000757D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 198DE91913341A0A00B9D56A /* Foundation.framework */; };
+		19C5D7651335628C000757D3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C5D7451335625E000757D3 /* CoreGraphics.framework */; };
+		19C5D76B1335628C000757D3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 19C5D7691335628C000757D3 /* InfoPlist.strings */; };
+		19C5D7711335628C000757D3 /* DLDataTestsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C5D7701335628C000757D3 /* DLDataTestsAppDelegate.m */; };
+		19C5D7741335628C000757D3 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19C5D7721335628C000757D3 /* MainWindow.xib */; };
+		19C5D77A133562B8000757D3 /* DLDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 198DE92513341A1900B9D56A /* DLDataManager.m */; };
+		19C5D77C133562B8000757D3 /* DLDataSeeder.m in Sources */ = {isa = PBXBuildFile; fileRef = 198DE92713341A1900B9D56A /* DLDataSeeder.m */; };
+		19C5D77E133562B8000757D3 /* DLDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 198DE92913341A1900B9D56A /* DLDataStore.m */; };
+		19C5D780133562B8000757D3 /* DLImageValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 198DE92C13341A1900B9D56A /* DLImageValueTransformer.m */; };
+		19C5D782133562B8000757D3 /* DLUniqueID.m in Sources */ = {isa = PBXBuildFile; fileRef = 198DE92E13341A1900B9D56A /* DLUniqueID.m */; };
+		19C5D784133562B8000757D3 /* DLUniqueIDGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 198DE93013341A1900B9D56A /* DLUniqueIDGenerator.m */; };
+		19C5D785133562B8000757D3 /* DLDataStore.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 198DE92A13341A1900B9D56A /* DLDataStore.xcdatamodel */; };
+		19C5D7A213356312000757D3 /* Company.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C5D788133562E8000757D3 /* Company.m */; };
+		19C5D7A313356312000757D3 /* CorporateMayhem.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 19C5D789133562E8000757D3 /* CorporateMayhem.xcdatamodel */; };
+		19C5D7A513356312000757D3 /* CorporateStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C5D78B133562E8000757D3 /* CorporateStore.m */; };
+		19C5D7A613356312000757D3 /* DLDataPurgeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C5D78C133562E8000757D3 /* DLDataPurgeTest.m */; };
+		19C5D7A713356312000757D3 /* DLDataSeederTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C5D78D133562E8000757D3 /* DLDataSeederTest.m */; };
+		19C5D7A813356312000757D3 /* DLFetchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C5D78E133562E8000757D3 /* DLFetchTest.m */; };
+		19C5D7A913356312000757D3 /* DLUndoRedoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C5D78F133562E8000757D3 /* DLUndoRedoTest.m */; };
+		19C5D7AA13356312000757D3 /* DLUniqueIDGeneratorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C5D790133562E8000757D3 /* DLUniqueIDGeneratorTest.m */; };
+		19C5D7AB13356312000757D3 /* DLValueTransformerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C5D791133562E8000757D3 /* DLValueTransformerTest.m */; };
+		19C5D7AD13356312000757D3 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C5D793133562E8000757D3 /* Employee.m */; };
+		19C5D7AF1335633C000757D3 /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C5D7AE1335633C000757D3 /* GHUnitIOS.framework */; };
+		19C5D7BC133566A3000757D3 /* GHUnitIOSTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C5D7B0133563C9000757D3 /* GHUnitIOSTestMain.m */; };
+		19C5D7C6133567D4000757D3 /* CompanyA.seed.json in Resources */ = {isa = PBXBuildFile; fileRef = 19C5D7BE133567C0000757D3 /* CompanyA.seed.json */; };
+		19C5D7C7133567D4000757D3 /* CompanyAEmployees.seed.json in Resources */ = {isa = PBXBuildFile; fileRef = 19C5D7BF133567C0000757D3 /* CompanyAEmployees.seed.json */; };
+		19C5D7C8133567D4000757D3 /* CompanyB.seed.json in Resources */ = {isa = PBXBuildFile; fileRef = 19C5D7C0133567C0000757D3 /* CompanyB.seed.json */; };
+		19C5D7C9133567D4000757D3 /* CompanyBEmployees.seed.json in Resources */ = {isa = PBXBuildFile; fileRef = 19C5D7C1133567C1000757D3 /* CompanyBEmployees.seed.json */; };
+		19C5D7CA133567D4000757D3 /* CompanyBManagement.seed.json in Resources */ = {isa = PBXBuildFile; fileRef = 19C5D7C2133567C1000757D3 /* CompanyBManagement.seed.json */; };
+		19C5D7CB133567D4000757D3 /* CompanyBSlaves.seed.json in Resources */ = {isa = PBXBuildFile; fileRef = 19C5D7C3133567C1000757D3 /* CompanyBSlaves.seed.json */; };
+		19C5D7CC133567D4000757D3 /* EmployeePhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 19C5D7C4133567C1000757D3 /* EmployeePhoto.png */; };
+		19C5D7CD133567D4000757D3 /* Main.seed.json in Resources */ = {isa = PBXBuildFile; fileRef = 19C5D7C5133567C1000757D3 /* Main.seed.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1920E1221337F72000DC381B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		19431B6B135E087400216DEC /* DLEntityDeletionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLEntityDeletionTest.m; sourceTree = "<group>"; };
+		1954C7FD133D46F50003ED1E /* DLEntityCreationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLEntityCreationTest.m; sourceTree = "<group>"; };
+		198DE91613341A0A00B9D56A /* libDLData.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDLData.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		198DE91913341A0A00B9D56A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		198DE91D13341A0A00B9D56A /* DLData-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DLData-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		198DE92313341A1900B9D56A /* DLData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLData.h; sourceTree = "<group>"; };
+		198DE92413341A1900B9D56A /* DLDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLDataManager.h; sourceTree = "<group>"; };
+		198DE92513341A1900B9D56A /* DLDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLDataManager.m; sourceTree = "<group>"; };
+		198DE92613341A1900B9D56A /* DLDataSeeder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLDataSeeder.h; sourceTree = "<group>"; };
+		198DE92713341A1900B9D56A /* DLDataSeeder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLDataSeeder.m; sourceTree = "<group>"; };
+		198DE92813341A1900B9D56A /* DLDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLDataStore.h; sourceTree = "<group>"; };
+		198DE92913341A1900B9D56A /* DLDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLDataStore.m; sourceTree = "<group>"; };
+		198DE92A13341A1900B9D56A /* DLDataStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DLDataStore.xcdatamodel; sourceTree = "<group>"; };
+		198DE92B13341A1900B9D56A /* DLImageValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLImageValueTransformer.h; sourceTree = "<group>"; };
+		198DE92C13341A1900B9D56A /* DLImageValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLImageValueTransformer.m; sourceTree = "<group>"; };
+		198DE92D13341A1900B9D56A /* DLUniqueID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLUniqueID.h; sourceTree = "<group>"; };
+		198DE92E13341A1900B9D56A /* DLUniqueID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLUniqueID.m; sourceTree = "<group>"; };
+		198DE92F13341A1900B9D56A /* DLUniqueIDGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLUniqueIDGenerator.h; sourceTree = "<group>"; };
+		198DE93013341A1900B9D56A /* DLUniqueIDGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLUniqueIDGenerator.m; sourceTree = "<group>"; };
+		19C5D7421335625E000757D3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		19C5D7451335625E000757D3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		19C5D7611335628C000757D3 /* DLDataTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DLDataTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		19C5D7681335628C000757D3 /* DLDataTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DLDataTests-Info.plist"; sourceTree = "<group>"; };
+		19C5D76A1335628C000757D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		19C5D76C1335628C000757D3 /* DLDataTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DLDataTests-Prefix.pch"; sourceTree = "<group>"; };
+		19C5D76D1335628C000757D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		19C5D76F1335628C000757D3 /* DLDataTestsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLDataTestsAppDelegate.h; sourceTree = "<group>"; };
+		19C5D7701335628C000757D3 /* DLDataTestsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLDataTestsAppDelegate.m; sourceTree = "<group>"; };
+		19C5D7731335628C000757D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		19C5D787133562E8000757D3 /* Company.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Company.h; sourceTree = "<group>"; };
+		19C5D788133562E8000757D3 /* Company.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Company.m; sourceTree = "<group>"; };
+		19C5D789133562E8000757D3 /* CorporateMayhem.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CorporateMayhem.xcdatamodel; sourceTree = "<group>"; };
+		19C5D78A133562E8000757D3 /* CorporateStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CorporateStore.h; sourceTree = "<group>"; };
+		19C5D78B133562E8000757D3 /* CorporateStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CorporateStore.m; sourceTree = "<group>"; };
+		19C5D78C133562E8000757D3 /* DLDataPurgeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLDataPurgeTest.m; sourceTree = "<group>"; };
+		19C5D78D133562E8000757D3 /* DLDataSeederTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLDataSeederTest.m; sourceTree = "<group>"; };
+		19C5D78E133562E8000757D3 /* DLFetchTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLFetchTest.m; sourceTree = "<group>"; };
+		19C5D78F133562E8000757D3 /* DLUndoRedoTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLUndoRedoTest.m; sourceTree = "<group>"; };
+		19C5D790133562E8000757D3 /* DLUniqueIDGeneratorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLUniqueIDGeneratorTest.m; sourceTree = "<group>"; };
+		19C5D791133562E8000757D3 /* DLValueTransformerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLValueTransformerTest.m; sourceTree = "<group>"; };
+		19C5D792133562E8000757D3 /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Employee.h; sourceTree = "<group>"; };
+		19C5D793133562E8000757D3 /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
+		19C5D7AE1335633C000757D3 /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnitIOS.framework; path = ../../External/GHUnit/Frameworks/GHUnitIOS.framework; sourceTree = "<group>"; };
+		19C5D7B0133563C9000757D3 /* GHUnitIOSTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GHUnitIOSTestMain.m; path = ../../../External/GHUnit/GHUnitIOSTestMain.m; sourceTree = "<group>"; };
+		19C5D7BE133567C0000757D3 /* CompanyA.seed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CompanyA.seed.json; sourceTree = "<group>"; };
+		19C5D7BF133567C0000757D3 /* CompanyAEmployees.seed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CompanyAEmployees.seed.json; sourceTree = "<group>"; };
+		19C5D7C0133567C0000757D3 /* CompanyB.seed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CompanyB.seed.json; sourceTree = "<group>"; };
+		19C5D7C1133567C1000757D3 /* CompanyBEmployees.seed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CompanyBEmployees.seed.json; sourceTree = "<group>"; };
+		19C5D7C2133567C1000757D3 /* CompanyBManagement.seed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CompanyBManagement.seed.json; sourceTree = "<group>"; };
+		19C5D7C3133567C1000757D3 /* CompanyBSlaves.seed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CompanyBSlaves.seed.json; sourceTree = "<group>"; };
+		19C5D7C4133567C1000757D3 /* EmployeePhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EmployeePhoto.png; sourceTree = "<group>"; };
+		19C5D7C5133567C1000757D3 /* Main.seed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Main.seed.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		198DE91313341A0A00B9D56A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				198DE91A13341A0A00B9D56A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19C5D75E1335628C000757D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1920E1231337F72000DC381B /* CoreData.framework in Frameworks */,
+				19C5D7AF1335633C000757D3 /* GHUnitIOS.framework in Frameworks */,
+				19C5D7631335628C000757D3 /* UIKit.framework in Frameworks */,
+				19C5D7641335628C000757D3 /* Foundation.framework in Frameworks */,
+				19C5D7651335628C000757D3 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		198DE90B13341A0900B9D56A = {
+			isa = PBXGroup;
+			children = (
+				198DE91B13341A0A00B9D56A /* Classes */,
+				198DE91C13341A0A00B9D56A /* Supporting Files */,
+				198DE93F13341A2E00B9D56A /* Data Models */,
+				19C5D7661335628C000757D3 /* DLDataTests */,
+				198DE91813341A0A00B9D56A /* Frameworks */,
+				198DE91713341A0A00B9D56A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		198DE91713341A0A00B9D56A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				198DE91613341A0A00B9D56A /* libDLData.a */,
+				19C5D7611335628C000757D3 /* DLDataTests.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		198DE91813341A0A00B9D56A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1920E1221337F72000DC381B /* CoreData.framework */,
+				19C5D7AE1335633C000757D3 /* GHUnitIOS.framework */,
+				198DE91913341A0A00B9D56A /* Foundation.framework */,
+				19C5D7421335625E000757D3 /* UIKit.framework */,
+				19C5D7451335625E000757D3 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		198DE91B13341A0A00B9D56A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				198DE92313341A1900B9D56A /* DLData.h */,
+				198DE92413341A1900B9D56A /* DLDataManager.h */,
+				198DE92513341A1900B9D56A /* DLDataManager.m */,
+				198DE92613341A1900B9D56A /* DLDataSeeder.h */,
+				198DE92713341A1900B9D56A /* DLDataSeeder.m */,
+				198DE92813341A1900B9D56A /* DLDataStore.h */,
+				198DE92913341A1900B9D56A /* DLDataStore.m */,
+				198DE92B13341A1900B9D56A /* DLImageValueTransformer.h */,
+				198DE92C13341A1900B9D56A /* DLImageValueTransformer.m */,
+				198DE92D13341A1900B9D56A /* DLUniqueID.h */,
+				198DE92E13341A1900B9D56A /* DLUniqueID.m */,
+				198DE92F13341A1900B9D56A /* DLUniqueIDGenerator.h */,
+				198DE93013341A1900B9D56A /* DLUniqueIDGenerator.m */,
+			);
+			path = Classes;
+			sourceTree = SOURCE_ROOT;
+		};
+		198DE91C13341A0A00B9D56A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				198DE91D13341A0A00B9D56A /* DLData-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = SOURCE_ROOT;
+		};
+		198DE93F13341A2E00B9D56A /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				198DE92A13341A1900B9D56A /* DLDataStore.xcdatamodel */,
+			);
+			name = "Data Models";
+			path = DataModels;
+			sourceTree = SOURCE_ROOT;
+		};
+		19C5D7661335628C000757D3 /* DLDataTests */ = {
+			isa = PBXGroup;
+			children = (
+				19C5D786133562C1000757D3 /* Tests */,
+				19C5D76F1335628C000757D3 /* DLDataTestsAppDelegate.h */,
+				19C5D7701335628C000757D3 /* DLDataTestsAppDelegate.m */,
+				19C5D7721335628C000757D3 /* MainWindow.xib */,
+				19C5D7671335628C000757D3 /* Supporting Files */,
+			);
+			name = DLDataTests;
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		19C5D7671335628C000757D3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				19C5D7BD133567AC000757D3 /* Seed */,
+				19C5D7B0133563C9000757D3 /* GHUnitIOSTestMain.m */,
+				19C5D7681335628C000757D3 /* DLDataTests-Info.plist */,
+				19C5D7691335628C000757D3 /* InfoPlist.strings */,
+				19C5D76C1335628C000757D3 /* DLDataTests-Prefix.pch */,
+				19C5D76D1335628C000757D3 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		19C5D786133562C1000757D3 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				19C5D787133562E8000757D3 /* Company.h */,
+				19C5D788133562E8000757D3 /* Company.m */,
+				19C5D789133562E8000757D3 /* CorporateMayhem.xcdatamodel */,
+				19C5D78A133562E8000757D3 /* CorporateStore.h */,
+				19C5D78B133562E8000757D3 /* CorporateStore.m */,
+				19C5D78C133562E8000757D3 /* DLDataPurgeTest.m */,
+				19C5D78D133562E8000757D3 /* DLDataSeederTest.m */,
+				19C5D78E133562E8000757D3 /* DLFetchTest.m */,
+				19C5D78F133562E8000757D3 /* DLUndoRedoTest.m */,
+				19C5D790133562E8000757D3 /* DLUniqueIDGeneratorTest.m */,
+				19C5D791133562E8000757D3 /* DLValueTransformerTest.m */,
+				19C5D792133562E8000757D3 /* Employee.h */,
+				19C5D793133562E8000757D3 /* Employee.m */,
+				1954C7FD133D46F50003ED1E /* DLEntityCreationTest.m */,
+				19431B6B135E087400216DEC /* DLEntityDeletionTest.m */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		19C5D7BD133567AC000757D3 /* Seed */ = {
+			isa = PBXGroup;
+			children = (
+				19C5D7BE133567C0000757D3 /* CompanyA.seed.json */,
+				19C5D7BF133567C0000757D3 /* CompanyAEmployees.seed.json */,
+				19C5D7C0133567C0000757D3 /* CompanyB.seed.json */,
+				19C5D7C1133567C1000757D3 /* CompanyBEmployees.seed.json */,
+				19C5D7C2133567C1000757D3 /* CompanyBManagement.seed.json */,
+				19C5D7C3133567C1000757D3 /* CompanyBSlaves.seed.json */,
+				19C5D7C4133567C1000757D3 /* EmployeePhoto.png */,
+				19C5D7C5133567C1000757D3 /* Main.seed.json */,
+			);
+			name = Seed;
+			path = Tests/Data;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		198DE91413341A0A00B9D56A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				198DE93113341A1900B9D56A /* DLData.h in Headers */,
+				198DE93213341A1900B9D56A /* DLDataManager.h in Headers */,
+				198DE93413341A1900B9D56A /* DLDataSeeder.h in Headers */,
+				198DE93613341A1900B9D56A /* DLDataStore.h in Headers */,
+				198DE93913341A1900B9D56A /* DLImageValueTransformer.h in Headers */,
+				198DE93D13341A1900B9D56A /* DLUniqueIDGenerator.h in Headers */,
+				198DE93B13341A1900B9D56A /* DLUniqueID.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		198DE91513341A0A00B9D56A /* DLData */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 198DE92013341A0A00B9D56A /* Build configuration list for PBXNativeTarget "DLData" */;
+			buildPhases = (
+				198DE91213341A0A00B9D56A /* Sources */,
+				198DE91313341A0A00B9D56A /* Frameworks */,
+				198DE91413341A0A00B9D56A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DLData;
+			productName = DLData;
+			productReference = 198DE91613341A0A00B9D56A /* libDLData.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		19C5D7601335628C000757D3 /* DLDataTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19C5D7751335628C000757D3 /* Build configuration list for PBXNativeTarget "DLDataTests" */;
+			buildPhases = (
+				19C5D75D1335628C000757D3 /* Sources */,
+				19C5D75E1335628C000757D3 /* Frameworks */,
+				19C5D75F1335628C000757D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DLDataTests;
+			productName = DLDataTests;
+			productReference = 19C5D7611335628C000757D3 /* DLDataTests.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		198DE90D13341A0900B9D56A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Diabolical Labs, LLC";
+			};
+			buildConfigurationList = 198DE91013341A0900B9D56A /* Build configuration list for PBXProject "DLData" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 198DE90B13341A0900B9D56A;
+			productRefGroup = 198DE91713341A0A00B9D56A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				198DE91513341A0A00B9D56A /* DLData */,
+				19C5D7601335628C000757D3 /* DLDataTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		19C5D75F1335628C000757D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19C5D7C6133567D4000757D3 /* CompanyA.seed.json in Resources */,
+				19C5D7C7133567D4000757D3 /* CompanyAEmployees.seed.json in Resources */,
+				19C5D7C8133567D4000757D3 /* CompanyB.seed.json in Resources */,
+				19C5D7C9133567D4000757D3 /* CompanyBEmployees.seed.json in Resources */,
+				19C5D7CA133567D4000757D3 /* CompanyBManagement.seed.json in Resources */,
+				19C5D7CB133567D4000757D3 /* CompanyBSlaves.seed.json in Resources */,
+				19C5D7CC133567D4000757D3 /* EmployeePhoto.png in Resources */,
+				19C5D7CD133567D4000757D3 /* Main.seed.json in Resources */,
+				19C5D76B1335628C000757D3 /* InfoPlist.strings in Resources */,
+				19C5D7741335628C000757D3 /* MainWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		198DE91213341A0A00B9D56A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				198DE93313341A1900B9D56A /* DLDataManager.m in Sources */,
+				198DE93513341A1900B9D56A /* DLDataSeeder.m in Sources */,
+				198DE93713341A1900B9D56A /* DLDataStore.m in Sources */,
+				198DE93813341A1900B9D56A /* DLDataStore.xcdatamodel in Sources */,
+				198DE93A13341A1900B9D56A /* DLImageValueTransformer.m in Sources */,
+				198DE93C13341A1900B9D56A /* DLUniqueID.m in Sources */,
+				198DE93E13341A1900B9D56A /* DLUniqueIDGenerator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19C5D75D1335628C000757D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19C5D7BC133566A3000757D3 /* GHUnitIOSTestMain.m in Sources */,
+				19C5D7A213356312000757D3 /* Company.m in Sources */,
+				19C5D7A313356312000757D3 /* CorporateMayhem.xcdatamodel in Sources */,
+				19C5D7A513356312000757D3 /* CorporateStore.m in Sources */,
+				19C5D7A613356312000757D3 /* DLDataPurgeTest.m in Sources */,
+				19C5D7A713356312000757D3 /* DLDataSeederTest.m in Sources */,
+				19C5D7A813356312000757D3 /* DLFetchTest.m in Sources */,
+				19C5D7A913356312000757D3 /* DLUndoRedoTest.m in Sources */,
+				19C5D7AA13356312000757D3 /* DLUniqueIDGeneratorTest.m in Sources */,
+				19C5D7AB13356312000757D3 /* DLValueTransformerTest.m in Sources */,
+				19C5D7AD13356312000757D3 /* Employee.m in Sources */,
+				19C5D77A133562B8000757D3 /* DLDataManager.m in Sources */,
+				19C5D77C133562B8000757D3 /* DLDataSeeder.m in Sources */,
+				19C5D77E133562B8000757D3 /* DLDataStore.m in Sources */,
+				19C5D780133562B8000757D3 /* DLImageValueTransformer.m in Sources */,
+				19C5D782133562B8000757D3 /* DLUniqueID.m in Sources */,
+				19C5D784133562B8000757D3 /* DLUniqueIDGenerator.m in Sources */,
+				19C5D785133562B8000757D3 /* DLDataStore.xcdatamodel in Sources */,
+				19C5D7711335628C000757D3 /* DLDataTestsAppDelegate.m in Sources */,
+				1954C7FE133D46F50003ED1E /* DLEntityCreationTest.m in Sources */,
+				19431B6C135E087400216DEC /* DLEntityDeletionTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		19C5D7691335628C000757D3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19C5D76A1335628C000757D3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		19C5D7721335628C000757D3 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19C5D7731335628C000757D3 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		198DE91E13341A0A00B9D56A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/usr/local/lib/include/";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PUBLIC_HEADERS_FOLDER_PATH = include/DLData/;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		198DE91F13341A0A00B9D56A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(TARGET_BUILD_DIR)/include/";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PUBLIC_HEADERS_FOLDER_PATH = include/DLData/;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		198DE92113341A0A00B9D56A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/DLData.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DLData-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		198DE92213341A0A00B9D56A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/DLData.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DLData-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		19C5D7761335628C000757D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../External/GHUnit/Frameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DLDataTests/DLDataTests-Prefix.pch";
+				INFOPLIST_FILE = "DLDataTests/DLDataTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		19C5D7771335628C000757D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../External/GHUnit/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DLDataTests/DLDataTests-Prefix.pch";
+				INFOPLIST_FILE = "DLDataTests/DLDataTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		198DE91013341A0900B9D56A /* Build configuration list for PBXProject "DLData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				198DE91E13341A0A00B9D56A /* Debug */,
+				198DE91F13341A0A00B9D56A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		198DE92013341A0A00B9D56A /* Build configuration list for PBXNativeTarget "DLData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				198DE92113341A0A00B9D56A /* Debug */,
+				198DE92213341A0A00B9D56A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19C5D7751335628C000757D3 /* Build configuration list for PBXNativeTarget "DLDataTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19C5D7761335628C000757D3 /* Debug */,
+				19C5D7771335628C000757D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 198DE90D13341A0900B9D56A /* Project object */;
+}

@@ -1,0 +1,10 @@
+{"Company" :
+  {"companyName" : "Foo Inc.",
+   "companyID" : "<uniqueID>"
+   "employees" : {
+      "seedlings" : [
+        {"seedUrl" : "bundleResource://CompanyBEmployees.seed"}
+      ]
+    }
+  }
+}

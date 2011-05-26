@@ -1,0 +1,16 @@
+{"Employee" : 
+  [
+    {"employeeName" : "Poor Sapp",
+     "employeeID" : "<uniqueID>",
+     "employeeSalary" : 1},
+    {"employeeName" : "Ms. Melody Treated",
+     "employeeID" : "<uniqueID>",
+     "employeeSalary" : 2},
+    {"employeeName" : "Dr. Knowledge J. Destitute",
+     "employeeID" : "<uniqueID>",
+     "employeeSalary" : 3},
+    {"employeeName" : "Andrew Hannon",
+     "employeeID" : "<uniqueID>",
+     "employeeSalary" : 0}
+  ]
+}

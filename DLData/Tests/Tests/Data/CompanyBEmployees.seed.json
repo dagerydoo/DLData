@@ -1,0 +1,5 @@
+{"seedlings" : [
+    {"seedUrl" : "bundleResource://CompanyBManagement.seed"},
+    {"seedUrl" : "bundleResource://CompanyBSlaves.seed"}
+  ]
+}
