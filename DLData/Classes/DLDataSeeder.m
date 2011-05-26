@@ -1,32 +1,37 @@
 //
 //  DLDataSeeder.m
-//  DataStoreLib
+//  DLData
 //
 //  Created by Andrew Hannon on 11/12/10.
-//  Copyright 2010 Diabolical Labs, LLC. All rights reserved.
+//  Copyright (C) 2011 by Andrew Hannon
 //
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
 
 #import <JSON/JSON.h>
 #import "DLUniqueIDGenerator.h"
 #import "DLDataSeeder.h"
 
-//NSURL *resourceSpecToUrl(NSString *resourceURLSpec, NSString *extension) {
-//  NSURL *url = [NSURL URLWithString:resourceURLSpec];
-//  if ([resourceURLSpec hasPrefix:bundlerSpecifier]) {
-//    NSString *resourceName = [resourceURLSpec substringFromIndex:[bundlerSpecifier length]];
-//    return [[NSBundle mainBundle] URLForResource:resourceName withExtension:extension];
-//  } 
-//  return [NSURL URLWithString:resourceURLSpec];
-//}
-
-//NSURL *resourceSpecToUrl(NSString *resourceURLSpec, NSString *extension) {
-//  static NSString *const bundlerSpecifier=@"bundleResource://";
-//  if ([resourceURLSpec hasPrefix:bundlerSpecifier]) {
-//    NSString *resourceName = [resourceURLSpec substringFromIndex:[bundlerSpecifier length]];
-//    return [[NSBundle mainBundle] URLForResource:resourceName withExtension:extension];
-//  } 
-//  return [NSURL URLWithString:resourceURLSpec];
-//}
+NSURL *resourceSpecToUrl(NSString *resourceURLSpec) {
+  NSString *resource = [resourceURLSpec stringByDeletingPathExtension];
+  return [[NSBundle mainBundle] URLForResource:resource 
+                                 withExtension:[resourceURLSpec pathExtension]];
+}
 
 typedef NSManagedObject *(^DLNewEntityBlock)(DLDataStore *dataStore,
                                              NSDictionary *properties);
@@ -41,9 +46,9 @@ NSString *const DLDataSeederException=@"DLDataSeederException";
 
 + (NSDictionary*)jsonToSeedDictionary:(NSURL*)seedJSONURL {
   NSError *jsonError=nil;
-  NSString *jsonData = [NSString stringWithContentsOfURL:seedJSONURL 
-                                                encoding:NSUTF8StringEncoding 
-                                                   error:&jsonError];
+  NSData *jsonData = [NSData dataWithContentsOfURL:seedJSONURL
+                                           options:0
+                                             error:&jsonError];
   if (jsonError) {
     NSLog(@"JSON error seeding data store: %@", [jsonError description]);
     @throw [NSException exceptionWithName:DLDataSeederException
@@ -51,7 +56,7 @@ NSString *const DLDataSeederException=@"DLDataSeederException";
                                  userInfo:[jsonError userInfo]];
   }
   SBJsonParser *parser = [SBJsonParser new];
-  id parsedObject = [parser objectWithString:jsonData];
+  id parsedObject = [parser objectWithData:jsonData];
   [parser release];
   NSDictionary *jsonDict = (NSDictionary*)parsedObject;
   if (! jsonDict) {
@@ -80,8 +85,7 @@ NSString *const DLDataSeederException=@"DLDataSeederException";
       for (NSDictionary *seedDict in [val objectForKey:@"seedlings"]) {
         NSString *seedURL = [seedDict objectForKey:@"seedUrl"];
         if (seedURL) {
-//          NSURL *resourceURL = resourceSpecToUrl(seedURL, @"json");
-          NSURL *resourceURL = [NSURL URLWithString:seedURL];
+          NSURL *resourceURL = resourceSpecToUrl(seedURL);
           [vals unionSet:[self seedDataStore:store fromSeedURL:resourceURL]];
         }
       }
@@ -109,11 +113,8 @@ NSString *const DLDataSeederException=@"DLDataSeederException";
     for (NSDictionary *seedURLDict in seedlings) {
       NSString *seedURLString = [seedURLDict objectForKey:@"seedUrl"];
       if (seedURLString) {
-//        NSSet *r = [self seedDataStore:dataStore 
-//                           fromSeedURL:resourceSpecToUrl(seedURLString, @"json")];
         NSSet *r = [self seedDataStore:dataStore 
-                           fromSeedURL:[NSURL URLWithString:seedURLString]];
-
+                           fromSeedURL:resourceSpecToUrl(seedURLString)];
         [entities unionSet:r];
       }
     }

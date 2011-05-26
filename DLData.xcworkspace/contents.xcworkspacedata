@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../json-framework/JSON.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:DLData/DLData.xcodeproj">
    </FileRef>
 </Workspace>

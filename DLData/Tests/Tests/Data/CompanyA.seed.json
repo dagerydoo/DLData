@@ -1,9 +1,9 @@
 {"Company" :
   {"companyName" : "Diabolical Labs, LLC",
-   "companyID" : "<uniqueID>"
+   "companyID" : "<uniqueID>",
    "employees" : {
       "seedlings" : [
-        {"seedUrl" : "bundleResource://CompanyAEmployees.seed"}
+        {"seedUrl" : "CompanyAEmployees.seed.json"}
       ]
     }
   }

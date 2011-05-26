@@ -1,5 +1,5 @@
 {"seedlings" : [
-    {"seedUrl" : "bundleResource://CompanyBManagement.seed"},
-    {"seedUrl" : "bundleResource://CompanyBSlaves.seed"}
+    {"seedUrl" : "CompanyBManagement.seed.json"},
+    {"seedUrl" : "CompanyBSlaves.seed.json"}
   ]
 }
