@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		190F57A8138EE03D004C9537 /* libjsonWS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 190F57A7138EE03D004C9537 /* libjsonWS.a */; };
-		190F57AC138EE0BB004C9537 /* libjsonWS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 190F57AB138EE0BB004C9537 /* libjsonWS.a */; };
+		190F57F6138F14CE004C9537 /* libjsonWS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 190F57F5138F14CE004C9537 /* libjsonWS.a */; };
 		190FD0F4138EB52C008EC700 /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 190FD0F3138EB52C008EC700 /* GHUnitIOS.framework */; };
 		1920E1231337F72000DC381B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1920E1221337F72000DC381B /* CoreData.framework */; };
 		19431B6C135E087400216DEC /* DLEntityDeletionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 19431B6B135E087400216DEC /* DLEntityDeletionTest.m */; };
@@ -63,51 +62,51 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		190F579A138EE020004C9537 /* PBXContainerItemProxy */ = {
+		190F57E7138F14B5004C9537 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 190F5790138EE020004C9537 /* JSON.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 190FD11D138EB646008EC700;
-			remoteInfo = libjsonWS;
-		};
-		190F579C138EE020004C9537 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 190F5790138EE020004C9537 /* JSON.xcodeproj */;
+			containerPortal = 190F57DD138F14B4004C9537 /* JSON.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = BC8778DA136CDE4400549A6D;
 			remoteInfo = JSON;
 		};
-		190F579E138EE020004C9537 /* PBXContainerItemProxy */ = {
+		190F57E9138F14B5004C9537 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 190F5790138EE020004C9537 /* JSON.xcodeproj */;
+			containerPortal = 190F57DD138F14B4004C9537 /* JSON.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = BC8778EE136CDE4400549A6D;
 			remoteInfo = JSONTests;
 		};
-		190F57A0138EE020004C9537 /* PBXContainerItemProxy */ = {
+		190F57EB138F14B5004C9537 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 190F5790138EE020004C9537 /* JSON.xcodeproj */;
+			containerPortal = 190F57DD138F14B4004C9537 /* JSON.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = BC2BC02C136CE6B30073BC4B;
 			remoteInfo = libjson;
 		};
-		190F57A2138EE020004C9537 /* PBXContainerItemProxy */ = {
+		190F57ED138F14B5004C9537 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 190F5790138EE020004C9537 /* JSON.xcodeproj */;
+			containerPortal = 190F57DD138F14B4004C9537 /* JSON.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = BC2BC036136CE6B30073BC4B;
 			remoteInfo = libjsonTests;
 		};
-		190F57A5138EE035004C9537 /* PBXContainerItemProxy */ = {
+		190F57EF138F14B5004C9537 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 190F5790138EE020004C9537 /* JSON.xcodeproj */;
+			containerPortal = 190F57DD138F14B4004C9537 /* JSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 190FD11D138EB646008EC700;
+			remoteInfo = libjsonWS;
+		};
+		190F57F1138F14C1004C9537 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 190F57DD138F14B4004C9537 /* JSON.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 190FD0FB138EB646008EC700;
 			remoteInfo = libjsonWS;
 		};
-		190F57A9138EE0AA004C9537 /* PBXContainerItemProxy */ = {
+		190F57F3138F14CA004C9537 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 190F5790138EE020004C9537 /* JSON.xcodeproj */;
+			containerPortal = 190F57DD138F14B4004C9537 /* JSON.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 190FD0FB138EB646008EC700;
 			remoteInfo = libjsonWS;
@@ -115,9 +114,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		190F5790138EE020004C9537 /* JSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JSON.xcodeproj; path = "/Users/dage/Development/DLData/../json-framework/JSON.xcodeproj"; sourceTree = "<absolute>"; };
-		190F57A7138EE03D004C9537 /* libjsonWS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libjsonWS.a; sourceTree = SOURCE_ROOT; };
-		190F57AB138EE0BB004C9537 /* libjsonWS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libjsonWS.a; sourceTree = SOURCE_ROOT; };
+		190F57DD138F14B4004C9537 /* JSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JSON.xcodeproj; path = "../External/json-framework/JSON.xcodeproj"; sourceTree = "<group>"; };
+		190F57F5138F14CE004C9537 /* libjsonWS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libjsonWS.a; sourceTree = SOURCE_ROOT; };
 		190FD0F3138EB52C008EC700 /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnitIOS.framework; path = ../External/GHUnit/Frameworks/GHUnitIOS.framework; sourceTree = "<group>"; };
 		1920E1221337F72000DC381B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		19431B6B135E087400216DEC /* DLEntityDeletionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DLEntityDeletionTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -178,7 +176,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				190F57A8138EE03D004C9537 /* libjsonWS.a in Frameworks */,
 				198DE91A13341A0A00B9D56A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,7 +184,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				190F57AC138EE0BB004C9537 /* libjsonWS.a in Frameworks */,
+				190F57F6138F14CE004C9537 /* libjsonWS.a in Frameworks */,
 				190FD0F4138EB52C008EC700 /* GHUnitIOS.framework in Frameworks */,
 				1920E1231337F72000DC381B /* CoreData.framework in Frameworks */,
 				19C5D7631335628C000757D3 /* UIKit.framework in Frameworks */,
@@ -199,24 +196,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		190F5791138EE020004C9537 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				190F579B138EE020004C9537 /* libjsonWS.a */,
-				190F579D138EE020004C9537 /* JSON.framework */,
-				190F579F138EE020004C9537 /* JSONTests.octest */,
-				190F57A1138EE020004C9537 /* liblibjson.a */,
-				190F57A3138EE020004C9537 /* libjsonTests.octest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		190F57A4138EE026004C9537 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				190F5790138EE020004C9537 /* JSON.xcodeproj */,
+				190F57DD138F14B4004C9537 /* JSON.xcodeproj */,
 			);
 			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		190F57DE138F14B4004C9537 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				190F57E8138F14B5004C9537 /* JSON.framework */,
+				190F57EA138F14B5004C9537 /* JSONTests.octest */,
+				190F57EC138F14B5004C9537 /* liblibjson.a */,
+				190F57EE138F14B5004C9537 /* libjsonTests.octest */,
+				190F57F0138F14B5004C9537 /* libjsonWS.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		198DE90B13341A0900B9D56A = {
@@ -244,8 +241,7 @@
 		198DE91813341A0A00B9D56A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				190F57AB138EE0BB004C9537 /* libjsonWS.a */,
-				190F57A7138EE03D004C9537 /* libjsonWS.a */,
+				190F57F5138F14CE004C9537 /* libjsonWS.a */,
 				190FD0F3138EB52C008EC700 /* GHUnitIOS.framework */,
 				1920E1221337F72000DC381B /* CoreData.framework */,
 				198DE91913341A0A00B9D56A /* Foundation.framework */,
@@ -387,7 +383,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				190F57A6138EE035004C9537 /* PBXTargetDependency */,
+				190F57F2138F14C1004C9537 /* PBXTargetDependency */,
 			);
 			name = DLData;
 			productName = DLData;
@@ -405,7 +401,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				190F57AA138EE0AA004C9537 /* PBXTargetDependency */,
+				190F57F4138F14CA004C9537 /* PBXTargetDependency */,
 			);
 			name = DLDataTests;
 			productName = DLDataTests;
@@ -432,8 +428,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 190F5791138EE020004C9537 /* Products */;
-					ProjectRef = 190F5790138EE020004C9537 /* JSON.xcodeproj */;
+					ProductGroup = 190F57DE138F14B4004C9537 /* Products */;
+					ProjectRef = 190F57DD138F14B4004C9537 /* JSON.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -445,39 +441,39 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		190F579B138EE020004C9537 /* libjsonWS.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libjsonWS.a;
-			remoteRef = 190F579A138EE020004C9537 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		190F579D138EE020004C9537 /* JSON.framework */ = {
+		190F57E8138F14B5004C9537 /* JSON.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = JSON.framework;
-			remoteRef = 190F579C138EE020004C9537 /* PBXContainerItemProxy */;
+			remoteRef = 190F57E7138F14B5004C9537 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		190F579F138EE020004C9537 /* JSONTests.octest */ = {
+		190F57EA138F14B5004C9537 /* JSONTests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = JSONTests.octest;
-			remoteRef = 190F579E138EE020004C9537 /* PBXContainerItemProxy */;
+			remoteRef = 190F57E9138F14B5004C9537 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		190F57A1138EE020004C9537 /* liblibjson.a */ = {
+		190F57EC138F14B5004C9537 /* liblibjson.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = liblibjson.a;
-			remoteRef = 190F57A0138EE020004C9537 /* PBXContainerItemProxy */;
+			remoteRef = 190F57EB138F14B5004C9537 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		190F57A3138EE020004C9537 /* libjsonTests.octest */ = {
+		190F57EE138F14B5004C9537 /* libjsonTests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = libjsonTests.octest;
-			remoteRef = 190F57A2138EE020004C9537 /* PBXContainerItemProxy */;
+			remoteRef = 190F57ED138F14B5004C9537 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		190F57F0138F14B5004C9537 /* libjsonWS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjsonWS.a;
+			remoteRef = 190F57EF138F14B5004C9537 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -548,15 +544,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		190F57A6138EE035004C9537 /* PBXTargetDependency */ = {
+		190F57F2138F14C1004C9537 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = libjsonWS;
-			targetProxy = 190F57A5138EE035004C9537 /* PBXContainerItemProxy */;
+			targetProxy = 190F57F1138F14C1004C9537 /* PBXContainerItemProxy */;
 		};
-		190F57AA138EE0AA004C9537 /* PBXTargetDependency */ = {
+		190F57F4138F14CA004C9537 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = libjsonWS;
-			targetProxy = 190F57A9138EE0AA004C9537 /* PBXContainerItemProxy */;
+			targetProxy = 190F57F3138F14CA004C9537 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
