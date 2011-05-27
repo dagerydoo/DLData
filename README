@@ -1,0 +1,3 @@
+## DLData
+
+DLData provides an abstraction layer atop CoreData. Its aims are to provide a simplified interface to CoreData, while allowing, with little additional effort, several data models to be used simultaneously within a single project. In addition, it provides a mechanism for persistent unique ID generation within application space. Another compelling feature is data seeding — given a single seed URL containing a JSON file, the database can be populated with an initial dataset.
