@@ -117,6 +117,7 @@
 		190F57DD138F14B4004C9537 /* JSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JSON.xcodeproj; path = "../External/json-framework/JSON.xcodeproj"; sourceTree = "<group>"; };
 		190F57F5138F14CE004C9537 /* libjsonWS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libjsonWS.a; sourceTree = SOURCE_ROOT; };
 		190FD0F3138EB52C008EC700 /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnitIOS.framework; path = ../External/GHUnit/Frameworks/GHUnitIOS.framework; sourceTree = "<group>"; };
+		1913BF64138FE5A500AAD620 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.markdown; path = ../README.markdown; sourceTree = "<group>"; };
 		1920E1221337F72000DC381B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		19431B6B135E087400216DEC /* DLEntityDeletionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DLEntityDeletionTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		1954C7FD133D46F50003ED1E /* DLEntityCreationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DLEntityCreationTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -219,6 +220,7 @@
 		198DE90B13341A0900B9D56A = {
 			isa = PBXGroup;
 			children = (
+				1913BF64138FE5A500AAD620 /* README.markdown */,
 				190F57A4138EE026004C9537 /* Dependencies */,
 				198DE91B13341A0A00B9D56A /* Classes */,
 				198DE91C13341A0A00B9D56A /* Supporting Files */,
