@@ -40,101 +40,36 @@
 }
 
 - (Company*)addCompanyNamed:(NSString*)companyName {
-  NSManagedObjectContext *moc = dataStore.managedObjectContext;
-  NSEntityDescription *desc = [NSEntityDescription entityForName:@"Company" inManagedObjectContext:moc];
-  Company *company = [[Company alloc] initWithEntity:desc insertIntoManagedObjectContext:moc];
+  Company *company = [self entityWithName:@"Company"];
   company.companyName = companyName;
   return company; 
 }
 
 - (Company*)companyNamed:(NSString*)companyName {
-  NSManagedObjectContext *moc = dataStore.managedObjectContext;
-  NSEntityDescription *desc = [NSEntityDescription entityForName:@"Company" inManagedObjectContext:moc];
-  NSFetchRequest *request = [[NSFetchRequest alloc] init];
-  
   NSPredicate *predicate = [NSPredicate predicateWithFormat:@"companyName == %@", companyName];
-  
-  [request setEntity:desc];
-  [request setFetchLimit:1];
-  [request setPredicate:predicate];
-  
-  NSError *error=nil;
-  NSArray *result = [moc executeFetchRequest:request error:&error];
-  [request release];
-  if (error) {
-    NSLog(@"Error fetching all companies: %@", error);
-    @throw [NSException exceptionWithName:@"DLCorporateStoreException"
-                                   reason:@"Unable to fetch allCompanies"
-                                 userInfo:[error userInfo]];
-  }
-  return [result objectAtIndex:0];  
+  return [self fetchOne:@"Company" matching:predicate sortedBy:nil];
 }
 
 - (NSArray*)allCompanies {
-  NSManagedObjectContext *moc = dataStore.managedObjectContext;
-  NSEntityDescription *desc = [NSEntityDescription entityForName:@"Company" inManagedObjectContext:moc];
-  NSFetchRequest *request = [[NSFetchRequest alloc] init];
-  [request setEntity:desc];
-
-  NSError *error=nil;
-  NSArray *result = [moc executeFetchRequest:request error:&error];
-  [request release];
-  if (error) {
-    NSLog(@"Error fetching all companies: %@", error);
-    @throw [NSException exceptionWithName:@"DLCorporateStoreException"
-                                   reason:@"Unable to fetch allCompanies"
-                                 userInfo:[error userInfo]];
-  }
-  return result;
+  return [self fetchAll:@"Company" matching:nil sortedBy:nil];
 }
 
 - (NSArray*)allEmployees {
-  NSManagedObjectContext *moc = dataStore.managedObjectContext;
-  NSEntityDescription *desc = [NSEntityDescription entityForName:@"Employee" inManagedObjectContext:moc];
-  NSFetchRequest *request = [[NSFetchRequest alloc] init];
-  [request setEntity:desc];
-  NSError *error=nil;
-  NSArray *result = [moc executeFetchRequest:request error:&error];
-  [request release];
-  if (error) {
-    NSLog(@"Error fetching all companies: %@", error);
-    @throw [NSException exceptionWithName:@"DLCorporateStoreException"
-                                   reason:@"Unable to fetch allCompanies"
-                                 userInfo:[error userInfo]];
-  }
-  return result;
+  return [self fetchAll:@"Employee" matching:nil sortedBy:nil];
 }
 
-- (NSSet*)allEmployeesForCompanyNamed:(NSString*)companyName {
-  NSManagedObjectContext *moc = dataStore.managedObjectContext;
-  NSEntityDescription *desc = [NSEntityDescription entityForName:@"Company" inManagedObjectContext:moc];
-
-  NSPredicate *predicate = [NSPredicate predicateWithFormat:@"companyName == %@", companyName];
-
-  NSFetchRequest *request = [[NSFetchRequest alloc] init];  
-  [request setEntity:desc];
-  [request setPredicate:predicate];
-  [request setFetchLimit:1];
-
-  NSError *error=nil;
-  NSArray *result = [moc executeFetchRequest:request error:&error];
-  [request release];
-  if (error) {
-    NSLog(@"Error fetching all companies: %@", error);
-    @throw [NSException exceptionWithName:@"DLCorporateStoreException"
-                                   reason:@"Unable to fetch allCompanies"
-                                 userInfo:[error userInfo]];
-  }
-  return [[result objectAtIndex:0] employees];  
+- (NSArray*)allEmployeesForCompanyNamed:(NSString*)companyName {
+  return [self executeFetchRequestNamed:@"allEmployeesByCompanyName"
+                  substitutionVariables:[NSDictionary dictionaryWithObject:companyName 
+                                                                    forKey:@"companyName"]
+                                  error:nil];
 }
 
 - (Employee*)employeeNamed:(NSString*)employeeName 
                 forCompany:(Company*)company {
-  NSPredicate *p = [NSPredicate predicateWithBlock:^(id evaluatedObject, NSDictionary *bindings) {
-    Employee *e = (Employee*)evaluatedObject;
-    return [employeeName isEqualToString:e.employeeName];
-  }];
-  return [[company.employees filteredSetUsingPredicate:p] anyObject];
+  NSDictionary *subs = [NSDictionary dictionaryWithObjectsAndKeys:
+                        employeeName, @"employeeName", company, @"company", nil];
+  return [self executeFetchOneRequestNamed:@"companyEmployeeByName" substitutionVariables:subs error:nil];
 }
 
 @end

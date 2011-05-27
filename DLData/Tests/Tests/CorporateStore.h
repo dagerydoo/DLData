@@ -30,10 +30,7 @@
 @interface CorporateStore : DLDataManager {
 }
 
-- (id)initWithModelName:(NSString*)modelName;
-
 - (Company*)addCompanyNamed:(NSString*)companyName;
-
 - (Company*)companyNamed:(NSString*)companyName;
 
 - (NSArray*)allCompanies;
@@ -41,6 +38,6 @@
 
 - (Employee*)employeeNamed:(NSString*)employeeName 
                 forCompany:(Company*)company;
-- (NSSet*)allEmployeesForCompanyNamed:(NSString*)companyName;
+- (NSArray*)allEmployeesForCompanyNamed:(NSString*)companyName;
 
 @end
