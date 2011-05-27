@@ -7,6 +7,7 @@ DLData provides an abstraction layer atop CoreData. Its aims are to provide a si
 ## Two Minute Example
 
 Using DLData is straightforward. Here, we set up all of our underlying CoreData (NSPersistentStoreCoordinator, et al) structures for the data model "CorporateMayhem":
+
 ```apple
 #import <DLData/DLData.h>
 
@@ -17,6 +18,7 @@ DLDataManager *manager = [[DLDataManager alloc] initWithModelName:@"CorporateMay
 ```
 
 Seed it with our data source:
+
 ```apple
 // Grab the seed file from the app bundle and seed the store
 NSURL *seedURL = [[NSBundle mainBundle] URLForResource:@"Main.seed" withExtension:@"json"];
@@ -24,6 +26,7 @@ NSURL *seedURL = [[NSBundle mainBundle] URLForResource:@"Main.seed" withExtensio
 ```
 
 We can fetch requests defined within the model:
+
 ```apple
 // Get the count of all well paid employees across all companies:
 NSUInteger wellPaidEmployees = [manager countForRequestNamed:@"wellPaidEmployees"];
@@ -34,6 +37,7 @@ NSArray *employees = [manager executeFetchRequestNamed:@"wellPaidEmployees" erro
 ```
 
 We can also just fetch a single entity of a given type, complete with sorting and matching criteria:
+
 ```apple
 NSError *error=nil;
 NSString *companyName = @"Foo Inc.";
@@ -42,6 +46,7 @@ Company *company = [manager fetchOne:@"Company" matching:p sortedBy:nil];
 ```
 
 Also, we can get the NSFetchRequest itself, if you need to configure (limit the number of results, sort, etc...):
+
 ```apple
 NSFetchRequest *request = [manager fetchRequestNamed:@"wellPaidEmployees"];
 [request setFetchLimit:5];
@@ -51,6 +56,7 @@ NSArray *fiveWellPaidEmployees = [manager executeFetchRequest:request error:&err
 ```
 
 Substitution variables are also supported:
+
 ```apple
 NSDictionary *subs = [NSDictionary dictionaryWithObject:company forKey:@"company"];
 NSArray *employees = [manager executeFetchRequestNamed:@"companyWellPaidEmployees" 
@@ -59,17 +65,20 @@ NSArray *employees = [manager executeFetchRequestNamed:@"companyWellPaidEmployee
 ```
 
 Easily create entities of a given type:
+
 ```apple
 Employee *employee = [manager entityWithName:@"Employee"];
 employee.company = company;
 ```
 
 Delete objects:
+
 ```apple
 [manager deleteEntity:company];
 ```
 
 Generate a unique numeric ID:
+
 ```apple
 unsigned long uniqueID = [DLUniqueIDGenerator generateUniqueID];
 NSNumber *uniqueNumber = [DLUniqueIDGenerator generateUniqueNumber];
