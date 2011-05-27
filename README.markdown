@@ -122,6 +122,8 @@ Should you choose, the DLDataManagerDelegate can be used to configure some key c
 @end
 ```
 
+View the DLDataTests for various examples of things you can do with DLData.
+
 ## Other Cool Things
 
 Want to use the same data model — perhaps "CorporateMayhem.xcdatamodel" — as the basis of two distinct data managers? No problem!
