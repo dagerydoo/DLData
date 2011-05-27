@@ -69,4 +69,59 @@ Delete objects:
 [manager deleteEntity:company];
 ```
 
-And, there is also undo/redo support, commit, rollback, delegation, built-in lightweight migration, and much more. Stay tuned!
+Generate a unique numeric ID:
+```apple
+unsigned long uniqueID = [DLUniqueIDGenerator generateUniqueID];
+NSNumber *uniqueNumber = [DLUniqueIDGenerator generateUniqueNumber];
+```
+
+And, there is also undo/redo support, commit, rollback, delegation, built-in lightweight migration, and much more.
+
+## DLDataManager
+
+Almost all interaction with DLData is via the DLDataManager. This class is also the class you should subclass if you need more fine grained control over the internals of fetch requests (e.g., sorting a specific NSFetchRequest that is used throughout your system). Here, have an example:
+
+```apple
+@interface CorporateStore : DLDataManager {
+}
+
+- (Company*)addCompanyNamed:(NSString*)companyName;
+- (Employee*)addEmployeeNamed:(NSString*)employee 
+                    toCompany:(Company*)company;
+- (Company*)companyNamed:(NSString*)companyName;
+- (Employee*)employeeNamed:(NSString*)employeeName 
+                forCompany:(Company*)company;
+
+@end
+```
+
+Internally, the CorporateStore sets the name of the data model, and wraps the fetch request calls with appropriate sorting/matching criteria.
+
+## DLDataManagerDelegate
+
+Should you choose, the DLDataManagerDelegate can be used to configure some key components in the data store lifecycle, such as lightweight migration.
+
+```apple
+@protocol DLDataManagerDelegate<NSObject>
+@optional
+- (BOOL)dataManagerSupportsUndo:(DLDataManager*)dataManager;
+- (BOOL)dataManagerSupportsLightweightMigration:(DLDataManager*)dataManager;
+- (void)dataManager:(DLDataManager*)dataManager
+     createdObjects:(NSSet*)createdObjects
+     updatedObjects:(NSSet*)updatedObjects
+     deletedObjects:(NSSet*)deletedObjects;
+@end
+```
+
+## Other Cool Things
+
+Want to use the same data model — perhaps "CorporateMayhem.xcdatamodel" — as the basis of two distinct data managers? No problem!
+
+```apple
+DLDataManager *managerA = [[DLDataManager alloc] initWithDataStoreModelName:@"CorporateMayhem" 
+                                                              andStoreAlias:@"ManagerA"];
+DLDataManager *managerB = [[DLDataManager alloc] initWithDataStoreModelName:@"CorporateMayhem" 
+                                                              andStoreAlias:@"ManagerB"];
+```
+
+Now that single data model will create two distinct underlying data stores (e.g., two sqlite databases) based on the same model. Pretty nifty, eh?
