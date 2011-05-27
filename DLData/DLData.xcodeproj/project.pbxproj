@@ -148,19 +148,19 @@
 		19C5D76F1335628C000757D3 /* DLDataTestsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = DLDataTestsAppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		19C5D7701335628C000757D3 /* DLDataTestsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DLDataTestsAppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		19C5D7731335628C000757D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		19C5D787133562E8000757D3 /* Company.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Company.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		19C5D788133562E8000757D3 /* Company.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Company.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		19C5D789133562E8000757D3 /* CorporateMayhem.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CorporateMayhem.xcdatamodel; sourceTree = "<group>"; };
-		19C5D78A133562E8000757D3 /* CorporateStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CorporateStore.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		19C5D78B133562E8000757D3 /* CorporateStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CorporateStore.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		19C5D787133562E8000757D3 /* Company.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = Company.h; path = Tests/Company.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		19C5D788133562E8000757D3 /* Company.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = Company.m; path = Tests/Company.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		19C5D789133562E8000757D3 /* CorporateMayhem.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; name = CorporateMayhem.xcdatamodel; path = Tests/CorporateMayhem.xcdatamodel; sourceTree = "<group>"; };
+		19C5D78A133562E8000757D3 /* CorporateStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = CorporateStore.h; path = Tests/CorporateStore.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		19C5D78B133562E8000757D3 /* CorporateStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = CorporateStore.m; path = Tests/CorporateStore.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		19C5D78C133562E8000757D3 /* DLDataPurgeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DLDataPurgeTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		19C5D78D133562E8000757D3 /* DLDataSeederTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DLDataSeederTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		19C5D78E133562E8000757D3 /* DLFetchTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DLFetchTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		19C5D78F133562E8000757D3 /* DLUndoRedoTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DLUndoRedoTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		19C5D790133562E8000757D3 /* DLUniqueIDGeneratorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DLUniqueIDGeneratorTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		19C5D791133562E8000757D3 /* DLValueTransformerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DLValueTransformerTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		19C5D792133562E8000757D3 /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Employee.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		19C5D793133562E8000757D3 /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Employee.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		19C5D792133562E8000757D3 /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = Employee.h; path = Tests/Employee.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		19C5D793133562E8000757D3 /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = Employee.m; path = Tests/Employee.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		19C5D7B0133563C9000757D3 /* GHUnitIOSTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = GHUnitIOSTestMain.m; path = ../External/GHUnit/GHUnitIOSTestMain.m; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		19C5D7BE133567C0000757D3 /* CompanyA.seed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CompanyA.seed.json; path = Tests/Tests/Data/CompanyA.seed.json; sourceTree = SOURCE_ROOT; };
 		19C5D7BF133567C0000757D3 /* CompanyAEmployees.seed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CompanyAEmployees.seed.json; path = Tests/Tests/Data/CompanyAEmployees.seed.json; sourceTree = SOURCE_ROOT; };
@@ -215,6 +215,20 @@
 				190F57F0138F14B5004C9537 /* libjsonWS.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		193EBC211390686D001A452F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				19C5D787133562E8000757D3 /* Company.h */,
+				19C5D788133562E8000757D3 /* Company.m */,
+				19C5D789133562E8000757D3 /* CorporateMayhem.xcdatamodel */,
+				19C5D78A133562E8000757D3 /* CorporateStore.h */,
+				19C5D78B133562E8000757D3 /* CorporateStore.m */,
+				19C5D792133562E8000757D3 /* Employee.h */,
+				19C5D793133562E8000757D3 /* Employee.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		198DE90B13341A0900B9D56A = {
@@ -293,6 +307,7 @@
 		19C5D7661335628C000757D3 /* DLDataTests */ = {
 			isa = PBXGroup;
 			children = (
+				193EBC211390686D001A452F /* Model */,
 				19C5D786133562C1000757D3 /* Tests */,
 				19C5D76F1335628C000757D3 /* DLDataTestsAppDelegate.h */,
 				19C5D7701335628C000757D3 /* DLDataTestsAppDelegate.m */,
@@ -319,19 +334,12 @@
 		19C5D786133562C1000757D3 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				19C5D787133562E8000757D3 /* Company.h */,
-				19C5D788133562E8000757D3 /* Company.m */,
-				19C5D789133562E8000757D3 /* CorporateMayhem.xcdatamodel */,
-				19C5D78A133562E8000757D3 /* CorporateStore.h */,
-				19C5D78B133562E8000757D3 /* CorporateStore.m */,
 				19C5D78C133562E8000757D3 /* DLDataPurgeTest.m */,
 				19C5D78D133562E8000757D3 /* DLDataSeederTest.m */,
 				19C5D78E133562E8000757D3 /* DLFetchTest.m */,
 				19C5D78F133562E8000757D3 /* DLUndoRedoTest.m */,
 				19C5D790133562E8000757D3 /* DLUniqueIDGeneratorTest.m */,
 				19C5D791133562E8000757D3 /* DLValueTransformerTest.m */,
-				19C5D792133562E8000757D3 /* Employee.h */,
-				19C5D793133562E8000757D3 /* Employee.m */,
 				1954C7FD133D46F50003ED1E /* DLEntityCreationTest.m */,
 				19431B6B135E087400216DEC /* DLEntityDeletionTest.m */,
 			);
