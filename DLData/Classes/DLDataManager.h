@@ -80,6 +80,11 @@ extern NSString *const DLDataStoreFetchException;
 - (NSArray*)executeFetchRequestNamed:(NSString*)templateName
                substitutionVariables:(NSDictionary *)variables
                                error:(NSError**)error;
+- (id)executeFetchOneRequestNamed:(NSString*)templateName
+                            error:(NSError**)error;
+- (id)executeFetchOneRequestNamed:(NSString*)templateName
+            substitutionVariables:(NSDictionary *)variables
+                            error:(NSError**)error;
 
 - (void)deleteEntity:(NSManagedObject*)entity;
 

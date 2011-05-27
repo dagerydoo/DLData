@@ -123,6 +123,21 @@ NSString *const DLDataStoreFetchException=@"DLDataStoreFetchException";
   return [self executeFetchRequest:request error:error];
 }
 
+- (id)executeFetchOneRequestNamed:(NSString*)templateName
+                            error:(NSError**)error {
+  NSFetchRequest *request = [self fetchRequestNamed:templateName];
+  [request setFetchLimit:1];
+  return [[self executeFetchRequest:request error:error] lastObject];
+}
+
+- (id)executeFetchOneRequestNamed:(NSString*)templateName
+            substitutionVariables:(NSDictionary *)variables
+                            error:(NSError**)error {
+  NSFetchRequest *request = [self fetchRequestNamed:templateName substitutionVariables:variables];
+  [request setFetchLimit:1];
+  return [[self executeFetchRequest:request error:error] lastObject];  
+}
+
 - (NSFetchRequest*)fetchRequestForEntity:(NSString*)entityName
                                 matching:(NSPredicate*)predicate
                                 sortedBy:(NSArray*)sortDescriptors {
