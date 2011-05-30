@@ -1,5 +1,5 @@
 { "seedlings" : [
-  {"seedUrl" : "CompanyA.seed.json"},
-  {"seedUrl" : "CompanyB.seed.json"}
+  {"seedFile" : "CompanyA.seed.json"},
+  {"seedFile" : "CompanyB.seed.json"}
   ]
 }

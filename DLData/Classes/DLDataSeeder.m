@@ -84,10 +84,16 @@ NSString *const DLDataSeederException=@"DLDataSeederException";
       // A list of seedlings:
       for (NSDictionary *seedDict in [val objectForKey:@"seedlings"]) {
         NSString *seedURL = [seedDict objectForKey:@"seedUrl"];
+        NSURL *resourceURL = nil;
         if (seedURL) {
-          NSURL *resourceURL = resourceSpecToUrl(seedURL);
-          [vals unionSet:[self seedDataStore:store fromSeedURL:resourceURL]];
+          resourceURL = [NSURL URLWithString:seedURL];
+        } else {
+          seedURL = [seedDict objectForKey:@"seedFile"];
+          if (seedURL) {
+            resourceURL = resourceSpecToUrl(seedURL);            
+          }
         }
+        [vals unionSet:[self seedDataStore:store fromSeedURL:resourceURL]];
       }
       [entityInstance setValue:vals forKey:property];
     } else if ([val isKindOfClass:[NSString class]] && [val isEqualToString:@"<uniqueID>"]) {
@@ -111,12 +117,18 @@ NSString *const DLDataSeederException=@"DLDataSeederException";
   NSArray *seedlings = [jsonDict objectForKey:@"seedlings"];
   if (seedlings) {
     for (NSDictionary *seedURLDict in seedlings) {
-      NSString *seedURLString = [seedURLDict objectForKey:@"seedUrl"];
-      if (seedURLString) {
-        NSSet *r = [self seedDataStore:dataStore 
-                           fromSeedURL:resourceSpecToUrl(seedURLString)];
-        [entities unionSet:r];
+      NSString *seedURL = [seedURLDict objectForKey:@"seedUrl"];
+      NSURL *resourceURL = nil;
+      if (seedURL) {
+        resourceURL = [NSURL URLWithString:seedURL];
+      } else {
+        seedURL = [seedURLDict objectForKey:@"seedFile"];
+        if (seedURL) {
+          resourceURL = resourceSpecToUrl(seedURL);            
+        }
       }
+      NSSet *r = [self seedDataStore:dataStore fromSeedURL:resourceURL];
+      [entities unionSet:r];
     }
   } else {
     if ([jsonDict count] != 1) {

@@ -3,7 +3,7 @@
    "companyID" : "<uniqueID>",
    "employees" : {
       "seedlings" : [
-        {"seedUrl" : "CompanyBEmployees.seed.json"}
+        {"seedFile" : "CompanyBEmployees.seed.json"}
       ]
     }
   }
