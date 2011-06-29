@@ -1,0 +1,6 @@
+Apple:
+  Foundation.framework
+
+Vendor:
+  GHUnit git://github.com/gabriel/gh-unit.git, :target => "unit_tests"
+  SBJson git://github.com/stig/json-framework.git, :branch => "branch3.0"
