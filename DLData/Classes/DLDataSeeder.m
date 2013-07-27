@@ -23,7 +23,6 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#import <SBJson/SBJson.h>
 #import "DLUniqueIDGenerator.h"
 #import "DLDataSeeder.h"
 
@@ -44,6 +43,7 @@ NSString *const DLDataSeederException=@"DLDataSeederException";
 
 @implementation DLDataSeeder
 
+// NOTE(ACH) If this is pulling from the network, it can be inefficient...
 + (NSDictionary*)jsonToSeedDictionary:(NSURL*)seedJSONURL {
   NSError *jsonError=nil;
   NSData *jsonData = [NSData dataWithContentsOfURL:seedJSONURL
@@ -55,15 +55,16 @@ NSString *const DLDataSeederException=@"DLDataSeederException";
                                    reason:@"Unable to retrieve JSON"
                                  userInfo:[jsonError userInfo]];
   }
-  SBJsonParser *parser = [SBJsonParser new];
-  id parsedObject = [parser objectWithData:jsonData];
-  [parser release];
-  NSDictionary *jsonDict = (NSDictionary*)parsedObject;
-  if (! jsonDict) {
-    NSLog(@"Unable to parse JSON");
+
+  NSError *error=nil;
+  NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                           options:kNilOptions
+                                                             error:&error];
+  if (error) {
+    NSLog(@"Unable to parse JSON due to error %@", error);
     @throw [NSException exceptionWithName:DLDataSeederException
                                    reason:@"Unable to parse JSON"
-                                 userInfo:nil];
+                                 userInfo:[NSDictionary dictionaryWithObject:error forKey:@"NSError"]];
   }
   return jsonDict;
 }
