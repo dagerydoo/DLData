@@ -15,11 +15,10 @@ Installation Steps:
 1. Create a new workspace, if you don't already have one (^-cmd-N)
 2. Add your existing project to the workspace
 3. Add the DLData *project* (DLData/DLData.xcodeproj) to the same workspace (note: do not add the top-level DLData workspace)
-4. Add the SBJson (aka json-framework) project (SBJson.xcodeproj) to your workspace. A known working version is located in External/ if you don't already use it.
-5. Add DLData to your app's project (this allows you to add DLData as dependency)
-6. In your app's target, specify DLData as a target dependency 
-7. In your app's target, specify DLData as a linked library
-8. Finally, you need to setup your header search paths to work within the workspace:
+4. Add DLData to your app's project (this allows you to add DLData as dependency)
+5. In your app's target, specify DLData as a target dependency
+6. In your app's target, specify DLData as a linked library
+7. Finally, you need to setup your header search paths to work within the workspace:
   * For Debug, add the following directories (in this order):
     * include/
     * $(BUILT_PRODUCTS_DIR)/usr/local/lib/include/
@@ -30,7 +29,7 @@ If you are unfamiliar with the workspace concept, you might find it beneficial t
 
 ### Easy (though not as cool)
 
-Copy all of the files in the "Classes" and "Data Models" groups into your project, and grab a stable version of SBJson (https://github.com/stig/json-framework) and follow those installation instructions, as well...
+Copy all of the files in the "Classes" and "Data Models" groups into your project...
 
 ## Two Minute Example
 

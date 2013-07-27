@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:External/json-framework/SBJson.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:DLData/DLData.xcodeproj">
    </FileRef>
 </Workspace>
